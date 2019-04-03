@@ -44,7 +44,7 @@ def on_open(ws):
 
 if __name__ == "__main__":
     websocket.enableTrace(True)
-    ws = websocket.WebSocketApp("ws://192.168.43.188:3006/predictor",
+    ws = websocket.WebSocketApp("wss://salty-brushlands-62683.herokuapp.com/predictor",
                               on_message = on_message,
                               on_error = on_error,
                               on_close = on_close)
