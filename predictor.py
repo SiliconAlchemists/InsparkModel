@@ -22,13 +22,6 @@ def on_message(ws, message):
         pred = model.predict(x2)
         sender = '{"action":"prediction", "prediction":"' + str(pred[0])+ '"}'
         ws.send(sender)
-    # x2 = np.array([x])
-    # x2.reshape(-1,1)
-    # print(x2)
-    # print(model.predict(x2))
-    # print('test')
-    # print(message)
-
 
 def on_error(ws, error):
     print(error)
